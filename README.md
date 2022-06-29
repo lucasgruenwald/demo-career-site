@@ -1,24 +1,36 @@
-# README
+## Demo Company Careers Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Run Locally: 
 
-Things you may want to cover:
+in main folder:
+  bundle install 
+  rails db:migrate 
+  rails db:seed 
+  rails s   (port 3000)
 
-* Ruby version
+in frontend folder:
+  npm install 
+  npm start   (port 3001)
 
-* System dependencies
 
-* Configuration
+### Features
 
-* Database creation
+* Displays team members from the backend ( GET /team_members )
+  * displays the employee name, title, id, and profile photo
 
-* Database initialization
+* Displays job postings from the backend ( GET /jobs )
+  * displays the job title, id, a link to the post
+  * UI provides an application form under each posting
 
-* How to run the test suite
+* Receives job applications from the UI ( POST /job/:id )
+  * form posts to Applicants with the associated job id 
+  * accepts params name, email, linkedin, & jobid 
+  * enforces a few basic rails validations 
 
-* Services (job queues, cache servers, search engines, etc.)
+* For demo purposes, the site displays a list of your application submissions 
 
-* Deployment instructions
+### Stack
 
-* ...
+* Frontend: JavaScript & React (Functional Components, Hooks)
+* Backend: Ruby on Rails
+* Bootstrap 5

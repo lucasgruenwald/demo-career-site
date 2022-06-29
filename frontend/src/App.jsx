@@ -64,14 +64,9 @@ function App() {
           <p>(For Demo Purposes)</p>
           <Applicants/>
         </div>
-        <div className='api-section' id="mission" style={{ "minHeight": "10vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "20px", "paddingBottom": "20px"}}>
-          <h3 style={{"paddingTop": "20px", "paddingBottom": "20px", "color": "#020357"}}>API Info</h3>
-          <p>(For Demo Purposes)</p>
-          <p>List your routes</p>
-        </div>
       </div>
 
-      <div className='footer' style={{ "marginTop": "200px", "color": "#020357"}}>This is your footer div</div>
+      <div className='footer' style={{ "marginTop": "200px", "color": "#020357"}}>Built by Luke Gruenwald</div>
     </div>
   );
 }

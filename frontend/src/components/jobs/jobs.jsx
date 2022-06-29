@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import JobForm from "./jobForm";
-var numberToWords = require('number-to-words');
 
 const Jobs = () => {
 
@@ -16,13 +15,6 @@ const Jobs = () => {
             .then(response => response.json())
             .then(data => setJobs(data));
     }, []);
-
-    const toWords = (num) => {
-        num += 1
-        let word = numberToWords.toWords(num);
-        let capitalized = word.charAt(0).toUpperCase() + word.slice(1);
-        return capitalized;
-    }
 
     const jobFormContainer = (jobID, dataTarget) => {
         return( 
@@ -42,29 +34,25 @@ const Jobs = () => {
         )
     }
 
-     let jobDivs = (
+     const jobDivs = (
         <div className="accordion" id="accordionExample" style={{"width": "80vw", "maxWidth": "900px", "margin": "auto"}}>
             {jobs && jobs.length > 0 && jobs.map((job, idx) => {
 
-                let dataTarget = "collapse" + toWords(idx)
-                let heading = "heading" + toWords(idx)
-                // console.log(job.id)
-
                 return(
                     <div key={idx}  className="accordion-item">
-                        <h2 className="accordion-header" id={`${heading}`}>
-                        <button className="accordion-button d-flex flex-wrap collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${dataTarget}`} aria-expanded="false" aria-controls={`${dataTarget}`}>
+                        <h2 className="accordion-header" id={`heading${idx}`}>
+                        <button className="accordion-button d-flex flex-wrap collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${idx}`} aria-expanded="false" aria-controls={`collapse${idx}`}>
                             {job.title}
                         </button>
                         </h2>
-                        <div id={`${dataTarget}`} className="accordion-collapse collapse" aria-labelledby={`${heading}`} data-bs-parent="#accordionExample">
+                        <div id={`collapse${idx}`} className="accordion-collapse collapse" aria-labelledby={`heading${idx}`} data-bs-parent="#accordionExample">
                             <div className="justify-content-between accordion-body">
                                 <a href={job.post} target="_blank">
                                     <p className="d-inline-flex flex-wrap" style={{"wordBreak": "break-all"}}>
                                         link to job description
                                     </p>
                                 </a>
-                                {jobFormContainer(job.id, dataTarget)}
+                                {jobFormContainer(job.id, `collapse${idx}`)}
                             </div>
                         </div>
                     </div>

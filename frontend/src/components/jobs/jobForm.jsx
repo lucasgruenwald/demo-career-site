@@ -20,8 +20,14 @@ const JobForm = (jobID) => {
                     jobid: id
                 })
             })
-            // provide success message instead of just refreshing
-            window.location = "/";
+            .then((response) => {
+                if (response.statusText == "OK"){
+                    alert("We received your submission, thank you!")
+                    window.location = "/";
+                } else {
+                    alert("Please Enter the Required Information.");
+                }
+            })
         } catch (error) {
             console.error(error.message);
         }
