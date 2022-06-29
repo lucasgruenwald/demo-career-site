@@ -41,10 +41,6 @@ const JobForm = (jobID) => {
                 <label htmlFor="linkedin" className="form-label">LinkedIn Profile</label>
                 <input value={linkedin} onChange={(e) => setLinkedin(e.target.value)} type="text" className="form-control" id="linkedin"/>
             </div>
-            <div className="mb-3 form-check d-flex justify-content-center">
-                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                <label className="form-check-label" htmlFor="exampleCheck1">&nbsp; Example checkbox (add recaptcha!)</label>
-            </div>
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
     )

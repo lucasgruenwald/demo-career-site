@@ -3,7 +3,7 @@ import React from "react";
 const TeamMember = (props) => {
 
     return (
-        <div className="p-2" style={{"marginLeft": "10px", "marginRight": "10px", "marginBottom": "10px", "borderRadius": "5px", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "width": "160px", "minHeight": "160px"}}>
+        <div className="p-2" style={{"marginLeft": "10px", "marginRight": "10px", "marginBottom": "10px", "borderRadius": "5px", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "width": "160px", "minHeight": "160px", "backgroundColor": "whitesmoke"}}>
             <img 
             src={props.picture} 
             alt='employee headshot'

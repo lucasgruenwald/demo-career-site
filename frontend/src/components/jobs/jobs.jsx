@@ -59,9 +59,11 @@ const Jobs = () => {
                         </h2>
                         <div id={`${dataTarget}`} className="accordion-collapse collapse" aria-labelledby={`${heading}`} data-bs-parent="#accordionExample">
                             <div className="justify-content-between accordion-body">
-                                <p className="d-inline-flex flex-wrap" style={{"wordBreak": "break-all"}}>
-                                {job.post}
-                                </p>
+                                <a href={job.post} target="_blank">
+                                    <p className="d-inline-flex flex-wrap" style={{"wordBreak": "break-all"}}>
+                                        link to job description
+                                    </p>
+                                </a>
                                 {jobFormContainer(job.id, dataTarget)}
                             </div>
                         </div>
