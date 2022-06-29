@@ -2,15 +2,17 @@
 
 ### Run Locally: 
 
-in main folder:
-  bundle install 
-  rails db:migrate 
-  rails db:seed 
-  rails s   (port 3000)
+  * Main folder: 
+    * bundle install 
+    * rails db:migrate 
+    * rails db:seed 
+    * rails s   (port 3000)
 
-in frontend folder:
-  npm install 
-  npm start   (port 3001)
+  * Frontend folder:
+    * npm install 
+    * npm start   (port 3001)
+
+Rails 7.0.3 - Ruby 3.1.2
 
 
 ### Features
