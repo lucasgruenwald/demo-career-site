@@ -12,25 +12,25 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_25_161227) do
   create_table "applicants", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "linkedin"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.text "linkedin", null: false
     t.integer "jobid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.string "title"
-    t.text "post"
+    t.string "title", null: false
+    t.text "post", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "team_members", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.text "picture"
+    t.string "name", null: false
+    t.string "title", null: false
+    t.text "picture", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
