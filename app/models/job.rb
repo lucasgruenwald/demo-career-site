@@ -11,5 +11,6 @@
 class Job < ApplicationRecord
 
   validates :title, :post, presence: true
+  validates :post, uniqueness: true
   
 end

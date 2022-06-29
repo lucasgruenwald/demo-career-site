@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div className='header'>
 
-        <nav className="navbar navbar-expand-sm navbar-light" style={{ "background": "linear-gradient(to right, #e3f2fd, #f5f7f8)"}}>
+        <nav className="navbar navbar-expand-sm navbar-light" style={{ "zIndex": "100", "background": "linear-gradient(to right, #e3f2fd, #f5f7f8)", "position": "fixed", "width": "100%", "top": "0", "left": "0"}}>
           <div className="container-fluid">
             <a className="navbar-brand" href="/">JobSite</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,15 +39,15 @@ function App() {
       </div>
 
       <div className='body-container'>
-        <div className='about-section' id="about" style={{ "minHeight": "30vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "5vh", "paddingBottom": "5vh"}}>
-          <h3>About Us</h3>
-          <p style={{"padding": "10vw"}}>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <div className='about-section' id="about" style={{ "minHeight": "30vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "10vh", "paddingBottom": "5vh", "backgroundImage": "url(https://media.istockphoto.com/photos/abstract-blue-blurred-geometry-wireframe-network-and-connecting-dot-picture-id1187570238?k=20&m=1187570238&s=612x612&w=0&h=XcbPS4jxA-IwzZRGmx8fhYr0NLxN4tNjbubzEY0AvPU=)" }}>
+          <h3>We Get Excited to Work</h3>
+          <p style={{"padding": "10vw", "maxWidth": "800px", "margin": "auto", "padding": "3em"}}>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
         </div>
         <div className='values-section' id="values" style={{ "minHeight": "10vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "20px", "paddingBottom": "20px", "background": "linear-gradient(to left, #fff, #f5f7f8) no-repeat, #0073b9"}}>
           <h3 style={{"paddingTop": "20px", "paddingBottom": "20px" }}>Company Values</h3>
           <Values/>
         </div>
-        <div className='team-members-section' id="team" style={{ "minHeight": "10vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "20px", "paddingBottom": "20px"}}>
+        <div className='team-members-section' id="team" style={{ "minHeight": "10vh", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)", "paddingTop": "20px", "paddingBottom": "20px", "background": "linear-gradient(to right, #e3f2fd, #f5f7f8)"}}>
           <h3 style={{"paddingTop": "20px", "paddingBottom": "20px"}}>Current Team Members</h3>
           <TeamMembers/>
         </div>

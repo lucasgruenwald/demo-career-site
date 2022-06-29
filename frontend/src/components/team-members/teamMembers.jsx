@@ -17,7 +17,7 @@ const TeamMembers = () => {
     }, []);
 
     let teamMemberDivs = (
-        <div className="d-flex flex-wrap justify-content-evenly">
+        <div className="d-flex flex-wrap justify-content-evenly" style={{ "minWidth": "280px", "maxWidth": "800px"}}>
             {teamMembers && teamMembers.length > 0 && teamMembers.map((member) => {
                 return(
                 <div key={member.id}>
