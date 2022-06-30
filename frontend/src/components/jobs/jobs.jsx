@@ -18,18 +18,12 @@ const Jobs = () => {
 
     const jobFormContainer = (jobID, dataTarget) => {
         return( 
-            <div className="">
-                <p className="d-flex justify-content-center">
-                <a className="btn" style={{"backgroundColor": "#BDD8FF"}} data-bs-target={`#${dataTarget + jobID}`} data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    View Application Form
-                </a>
-                </p>
-
-                <div id={`${dataTarget + jobID}`} className="collapse" >
+            <div style={{"marginTop": "5px"}}>
+                <h6>Think you could be a good fit? Please apply!</h6>
                 <div className="card card-body">
                     <JobForm jobID={jobID}/>
                 </div>
-                </div>
+                {/* </div> */}
             </div>  
         )
     }
@@ -47,11 +41,13 @@ const Jobs = () => {
                         </h2>
                         <div id={`collapse${idx}`} className="accordion-collapse collapse" aria-labelledby={`heading${idx}`} data-bs-parent="#accordionExample">
                             <div className="justify-content-between accordion-body">
-                                <a href={job.post} target="_blank">
-                                    <p className="d-inline-flex flex-wrap" style={{"wordBreak": "break-all"}}>
-                                        link to job description
+                                <p style={{"maxWidth": "70vw", "margin": "auto", "paddingBottom": "3px"}}>This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p className="" style={{"wordBreak": "break-word", "margin": "auto"}}>
+                                        To learn more about this position, please read our&nbsp;
+                                        <a href={job.post} target="_blank" style={{ "margin": "auto" }}>
+                                                detailed job listing.
+                                        </a>
                                     </p>
-                                </a>
                                 {jobFormContainer(job.id, `collapse${idx}`)}
                             </div>
                         </div>
@@ -61,10 +57,18 @@ const Jobs = () => {
         </div>
     )   
 
+    // handle backend api not responding
+    let returningDiv
+    if (jobs){
+        returningDiv = jobDivs 
+    } else {
+        returningDiv = <p>Sorry, we aren't finding any open jobs at this time.</p>
+    }
+
 
     return (
         <div style={{"paddingBottom": "20px"}} >
-            {jobDivs}
+            {returningDiv}
         </div>
     )
 }

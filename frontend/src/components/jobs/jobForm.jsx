@@ -47,7 +47,7 @@ const JobForm = (jobID) => {
                 <label htmlFor="linkedin" className="form-label">LinkedIn Profile</label>
                 <input value={linkedin} onChange={(e) => setLinkedin(e.target.value)} type="text" className="form-control" id="linkedin"/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary">Submit Application</button>
         </form>
     )
 }

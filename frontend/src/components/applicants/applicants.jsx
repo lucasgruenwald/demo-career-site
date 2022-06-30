@@ -33,7 +33,7 @@ const Applicants = () => {
     )
 
     return (
-      <div className="table-responsive">
+      <div className="table-responsive" style={{"minHeight": "200px"}}>
         <table className="table table-striped" style={{"width": "90vw", "margin": "auto"}}>
         <thead>
           <tr>
