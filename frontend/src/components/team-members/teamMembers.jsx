@@ -34,16 +34,17 @@ const TeamMembers = () => {
     )
 
     // handle backend api not responding
-    let returningDiv
-    if (teamMembers) {
-        returningDiv = teamMemberDivs
-    } else {
-        returningDiv = <p>Sorry, we aren't finding team members at this time.</p>
+    const checkForTeamDivs = (teamMembers) => {
+        if (teamMembers){
+            return teamMemberDivs 
+        } else {
+            return <p>Sorry, we aren't finding team members at this time.</p>
+        }
     }
 
     return (
         <div className="d-inline-flex p-2 justify-content-center align-items-center">
-            {returningDiv}
+            {checkForTeamDivs(teamMembers)}
         </div>
     )
 }

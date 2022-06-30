@@ -21,7 +21,7 @@ const JobForm = (jobID) => {
                 })
             })
             .then((response) => {
-                if (response.statusText == "OK"){
+                if (response.statusText === "OK"){
                     alert("We received your submission, thank you!")
                     window.location = "/";
                 } else {

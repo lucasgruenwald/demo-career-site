@@ -44,7 +44,7 @@ const Jobs = () => {
                                 <p style={{"maxWidth": "70vw", "margin": "auto", "paddingBottom": "3px"}}>This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <p className="" style={{"wordBreak": "break-word", "margin": "auto"}}>
                                         To learn more about this position, please read our&nbsp;
-                                        <a href={job.post} target="_blank" style={{ "margin": "auto" }}>
+                                        <a href={job.post} target="_blank" rel="noreferrer" style={{ "margin": "auto" }}>
                                                 detailed job listing.
                                         </a>
                                     </p>
@@ -58,17 +58,17 @@ const Jobs = () => {
     )   
 
     // handle backend api not responding
-    let returningDiv
-    if (jobs){
-        returningDiv = jobDivs 
-    } else {
-        returningDiv = <p>Sorry, we aren't finding any open jobs at this time.</p>
+    const checkForJobDivs = (jobs) => {
+        if (jobs){
+            return jobDivs 
+        } else {
+            return <p>Sorry, we aren't finding any openings at this time.</p>
+        }
     }
-
 
     return (
         <div style={{"paddingBottom": "20px"}} >
-            {returningDiv}
+            {checkForJobDivs(jobs)}
         </div>
     )
 }

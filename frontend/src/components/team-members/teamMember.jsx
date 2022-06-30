@@ -22,5 +22,3 @@ const TeamMember = (props) => {
 }
 
 export default TeamMember;
-
-// style={"borderRadius": "5px", "boxShadow": "0 6px 16px 0 rgb(31 36 38 / 15%)"}}
