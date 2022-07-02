@@ -16,10 +16,10 @@ const Jobs = () => {
             .then(data => setJobs(data));
     }, []);
 
-    const jobFormContainer = (jobID, dataTarget) => {
+    const jobFormContainer = (jobID, jobTitle) => {
         return( 
             <div style={{"marginTop": "5px"}}>
-                <h6>Think you could be a good fit? Please apply!</h6>
+                <h4 className="d-inline-flex flex-wrap" style={{ "marginTop": "2em", "marginBottom": "2em" }}>{jobTitle}&nbsp;Application</h4>
                 <div className="card card-body">
                     <JobForm jobID={jobID}/>
                 </div>
@@ -41,14 +41,25 @@ const Jobs = () => {
                         </h2>
                         <div id={`collapse${idx}`} className="accordion-collapse collapse" aria-labelledby={`heading${idx}`} data-bs-parent="#accordionExample">
                             <div className="justify-content-between accordion-body">
-                                <p style={{"maxWidth": "70vw", "margin": "auto", "paddingBottom": "3px"}}>This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <p className="" style={{"wordBreak": "break-word", "margin": "auto"}}>
+                                <p style={{ "maxWidth": "70vw", "margin": "auto", "paddingBottom": "8px" }}>This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <p className="" style={{"wordBreak": "break-word", "margin": "auto", "marginBottom": "12px"}}>
                                         To learn more about this position, please read our&nbsp;
                                         <a href={job.post} target="_blank" rel="noreferrer" style={{ "margin": "auto" }}>
-                                                detailed job listing.
+                                                detailed job listing
                                         </a>
+                                        .
                                     </p>
-                                {jobFormContainer(job.id, `collapse${idx}`)}
+                                <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target={`#offcanvasRight${idx}`} style={{"marginBottom": "7px"}} aria-controls="offcanvasRight">Apply Now</button>
+
+                                <div className="offcanvas offcanvas-end" tabIndex="-1" id={`offcanvasRight${idx}`} aria-labelledby="offcanvasRightLabel" style={{"width": "90%", "maxWidth": "800px"}}>
+                                    <div className="offcanvas-header">
+                                        <h5 className="offcanvas-title" id="offcanvasRightLabel">Join Us!</h5>
+                                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div className="offcanvas-body">
+                                        {jobFormContainer(job.id, job.title)}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
