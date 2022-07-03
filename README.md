@@ -10,7 +10,7 @@
 
   * Frontend folder:
     * npm install 
-    * npm start   (port 3001)
+    * npm start 
 
 Rails 7.0.3 - Ruby 3.1.2
 

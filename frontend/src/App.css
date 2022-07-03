@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -22,18 +11,49 @@
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.about-section{
+  min-height: 30vh;
+  box-shadow: 0 6px 16px 0 rgb(31 36 38 / 15%);
+  padding-top: 15vh;
+  padding-bottom: 3vh;
+  background-image: url(https://media.istockphoto.com/photos/abstract-blue-blurred-geometry-wireframe-network-and-connecting-dot-picture-id1187570238?k=20&m=1187570238&s=612x612&w=0&h=XcbPS4jxA-IwzZRGmx8fhYr0NLxN4tNjbubzEY0AvPU=);
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.about-us-h3{
+  color: #020357;
+}
+
+.about-us-p{
+  max-width: 800px;
+  margin: auto;
+  padding: 3em;
+}
+
+.body-h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #020357;
+}
+
+.body-slice-primary{
+  min-height: 10vh;
+  box-shadow: 0 6px 16px 0 rgb(31 36 38 / 15%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(to left, #fff, #f5f7f8) no-repeat #0073b9;
+}
+
+.body-slice-secondary{
+  min-height: 10vh;
+  box-shadow: 0 6px 16px 0 rgb(31 36 38 / 15%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(to right, #e3f2fd, #f5f7f8);
+}
+
+.footer{
+  padding-top: 200px;
+  padding-bottom: 10px;
+  color: #020357;
+  background: linear-gradient(to right, #e3f2fd, #f5f7f8);
 }
