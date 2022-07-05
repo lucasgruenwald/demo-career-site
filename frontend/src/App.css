@@ -19,7 +19,7 @@
   background-image: url(https://media.istockphoto.com/photos/abstract-blue-blurred-geometry-wireframe-network-and-connecting-dot-picture-id1187570238?k=20&m=1187570238&s=612x612&w=0&h=XcbPS4jxA-IwzZRGmx8fhYr0NLxN4tNjbubzEY0AvPU=);
 }
 
-.about-us-h3{
+.about-us-h1{
   color: #020357;
 }
 
@@ -33,21 +33,22 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: #020357;
+  font-weight: 600;
 }
 
 .body-slice-primary{
   min-height: 10vh;
   box-shadow: 0 6px 16px 0 rgb(31 36 38 / 15%);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
   background: linear-gradient(to left, #fff, #f5f7f8) no-repeat #0073b9;
 }
 
 .body-slice-secondary{
   min-height: 10vh;
   box-shadow: 0 6px 16px 0 rgb(31 36 38 / 15%);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
   background: linear-gradient(to right, #e3f2fd, #f5f7f8);
 }
 
