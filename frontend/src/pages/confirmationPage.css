@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.conf-header{
+  height: 10vh;
+  background: linear-gradient(to right, #e3f2fd, #f5f7f8);
+}
+
+.conf-header-h5 {
+  text-align:left;
+  vertical-align: middle;
+  line-height: 90px; 
+  padding-left: 10vw;
+}
+
+.conf-body-container{
+  height: 40vh;
+  width: 80%;
+  margin: auto;
+  padding-top: 5vh;
+}
+
+.conf-body-h6 {
+  padding: 10px;
+  padding-top: 2vh;
+}
+
+.conf-image{
+  border-radius: 20px;
+  margin-bottom: 5vh;
+  width: 80%;
+  max-width: 400px;
+}
+
+.conf-footer{
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  color: #020357;
+  background: linear-gradient(to right, #e3f2fd, #f5f7f8);
+}
+
