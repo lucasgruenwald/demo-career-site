@@ -19,7 +19,8 @@ const Jobs = () => {
     const jobFormContainer = (jobID, jobTitle) => {
         return( 
             <div style={{"marginTop": "5px"}}>
-                <h4 className="d-inline-flex flex-wrap" style={{ "marginTop": "2em", "marginBottom": "2em" }}>{jobTitle}&nbsp;Application</h4>
+                <h4 className="d-inline-flex flex-wrap" style={{ "marginTop": "2em", "marginBottom": "1em" }}>{jobTitle}&nbsp;Application</h4>
+                <p>All fields are required.</p>
                 <div className="card card-body">
                     <JobForm jobID={jobID}/>
                 </div>
