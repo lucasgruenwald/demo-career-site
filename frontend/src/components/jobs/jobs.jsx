@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import JobForm from "./jobForm";
+import './jobs.css'
 
 const Jobs = () => {
 
@@ -18,19 +19,18 @@ const Jobs = () => {
 
     const jobFormContainer = (jobID, jobTitle) => {
         return( 
-            <div style={{"marginTop": "5px"}}>
-                <h4 className="d-inline-flex flex-wrap" style={{ "marginTop": "2em", "marginBottom": "1em" }}>{jobTitle}&nbsp;Application</h4>
+            <div className="job-form-container">
+                <h4 className="application-h4 d-inline-flex flex-wrap">{jobTitle}&nbsp;Application</h4>
                 <p>All fields are required.</p>
                 <div className="card card-body">
                     <JobForm jobID={jobID}/>
                 </div>
-                {/* </div> */}
             </div>  
         )
     }
 
      const jobDivs = (
-        <div className="accordion" id="accordionExample" style={{"width": "80vw", "maxWidth": "900px", "margin": "auto"}}>
+        <div className="accordion" id="accordionExample">
             {jobs && jobs.length > 0 && jobs.map((job, idx) => {
 
                 return(
@@ -42,17 +42,17 @@ const Jobs = () => {
                         </h2>
                         <div id={`collapse${idx}`} className="accordion-collapse collapse" aria-labelledby={`heading${idx}`} data-bs-parent="#accordionExample">
                             <div className="justify-content-between accordion-body">
-                                <p style={{ "maxWidth": "70vw", "margin": "auto", "paddingBottom": "8px" }}>This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <p className="" style={{"wordBreak": "break-word", "margin": "auto", "marginBottom": "12px"}}>
+                                <p className="placeholder-text">This is some example placeholder text if you wanted to store a brief job description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <p className="learn-more">
                                         To learn more about this position, please read our&nbsp;
-                                        <a href={job.post} target="_blank" rel="noreferrer" style={{ "margin": "auto" }}>
+                                        <a href={job.post} target="_blank" rel="noreferrer" className="detail-link">
                                                 detailed job listing
                                         </a>
                                         .
                                     </p>
-                                <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target={`#offcanvasRight${idx}`} style={{"marginBottom": "7px"}} aria-controls="offcanvasRight">Apply Now</button>
+                                <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target={`#offcanvasRight${idx}`} aria-controls="offcanvasRight">Apply Now</button>
 
-                                <div className="offcanvas offcanvas-end" tabIndex="-1" id={`offcanvasRight${idx}`} aria-labelledby="offcanvasRightLabel" style={{"width": "90%", "maxWidth": "800px"}}>
+                                <div className="offcanvas offcanvas-end" tabIndex="-1" id={`offcanvasRight${idx}`} aria-labelledby="offcanvasRightLabel">
                                     <div className="offcanvas-header">
                                         <h5 className="offcanvas-title" id="offcanvasRightLabel">Join Us!</h5>
                                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -79,7 +79,7 @@ const Jobs = () => {
     }
 
     return (
-        <div style={{"paddingBottom": "20px"}} >
+        <div className="job-container" >
             {checkForJobDivs(jobs)}
         </div>
     )

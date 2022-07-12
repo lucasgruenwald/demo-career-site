@@ -1,0 +1,43 @@
+.application-h4{
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.job-form-container{
+  margin-top: 5px;
+}
+
+.accordion{
+  width: 80vw;
+  max-width: 900px;
+  margin: auto;
+}
+
+.placeholder-text{
+  max-width: 70vw;
+  margin: auto;
+  padding-bottom: 8px;
+}
+
+.learn-more{
+  word-break: break-word; 
+  margin: auto;
+  margin-bottom: 12px;
+}
+
+.detail-link{
+  margin: auto;
+}
+
+.offcanvas-end{
+  width: 90%;
+  max-width: 800px;
+}
+
+.btn-primary{
+  margin-bottom: 7px;
+}
+
+.job-container{
+  padding-bottom: 20px;
+}

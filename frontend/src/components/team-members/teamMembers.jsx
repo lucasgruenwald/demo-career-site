@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import TeamMember from "./teamMember";
+import './teamMember.css'
 
 const TeamMembers = () => {
 
@@ -17,7 +18,7 @@ const TeamMembers = () => {
     }, []);
 
     let teamMemberDivs = (
-        <div className="d-flex flex-wrap justify-content-evenly" style={{ "minWidth": "280px", "maxWidth": "800px"}}>
+        <div className="d-flex flex-wrap justify-content-evenly member-container" >
             {teamMembers && teamMembers.length > 0 && teamMembers.map((member) => {
                 return(
                 <div key={member.id}>
